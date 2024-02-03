@@ -13,7 +13,7 @@ from helper.database import uploadlimit , usertype
 @Client.on_message(filters.private & filters.command(["myplan"]))
 async def start(client,message):
 	used_ = find_one(message.from_user.id)	
-	daily = used_["daily"]
+	daily_ = used_["daily"]
 	expi = daily - int(time.mktime(time.strptime(str(date_.today()), '%Y-%m-%d')))
 	if expi != 0:
 	     today = date_.today()
